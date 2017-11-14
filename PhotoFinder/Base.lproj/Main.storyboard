@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A5Q-dQ-ZYy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Zapfino.ttf">
+            <string>Zapfino</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wAR-aE-Fdi">
+            <objects>
+                <viewController id="A5Q-dQ-ZYy" customClass="ViewController" customModule="PhotoFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sZs-Y9-LPA"/>
+                        <viewControllerLayoutGuide type="bottom" id="KbS-TZ-LY7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hGw-KH-125">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tIv-EN-pCN">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08r-h8-bAd">
+                                        <rect key="frame" x="8" y="8" width="327" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="CS5-R6-ejO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TKe-Rm-uvx">
+                                        <rect key="frame" x="8" y="56" width="327" height="425"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="C6d-SX-N4c">
+                                        <rect key="frame" x="8" y="489" width="327" height="32"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phrase" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Evi-N5-wcF">
+                                                <rect key="frame" x="0.0" y="0.0" width="272" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="hVs-bQ-cI6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYD-Rt-vTc">
+                                                <rect key="frame" x="277" y="0.0" width="50" height="32"/>
+                                                <state key="normal" image="searchiconred"/>
+                                                <connections>
+                                                    <action selector="searchByPhrase:" destination="A5Q-dQ-ZYy" eventType="touchUpInside" id="EGl-9D-pYv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XMM-nF-kKs">
+                                        <rect key="frame" x="8" y="529" width="327" height="32"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Latitude" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Oq3-sh-JKR">
+                                                <rect key="frame" x="0.0" y="0.0" width="133.5" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Longitude" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2Ev-Pe-t72">
+                                                <rect key="frame" x="138.5" y="0.0" width="133.5" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfD-zj-Ib3">
+                                                <rect key="frame" x="277" y="0.0" width="50" height="32"/>
+                                                <state key="normal" image="searchiconred"/>
+                                                <connections>
+                                                    <action selector="searchByLatLon:" destination="A5Q-dQ-ZYy" eventType="touchUpInside" id="dyx-TZ-NZi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Oq3-sh-JKR" firstAttribute="width" secondItem="2Ev-Pe-t72" secondAttribute="width" id="Dc8-zV-GpH"/>
+                                            <constraint firstItem="2Ev-Pe-t72" firstAttribute="height" secondItem="Oq3-sh-JKR" secondAttribute="height" id="Qn0-PT-JVV"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGu-H5-Wcb">
+                                        <rect key="frame" x="8" y="569" width="327" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Zne-2o-uBh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lfD-zj-Ib3" firstAttribute="width" secondItem="IYD-Rt-vTc" secondAttribute="width" id="6Rz-ux-Vf3"/>
+                                    <constraint firstItem="Oq3-sh-JKR" firstAttribute="height" secondItem="Evi-N5-wcF" secondAttribute="height" id="R92-Vq-BKj"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="tIv-EN-pCN" secondAttribute="trailing" id="6wk-1p-Y5a"/>
+                            <constraint firstItem="tIv-EN-pCN" firstAttribute="top" secondItem="sZs-Y9-LPA" secondAttribute="bottom" id="xnI-M6-Lrx"/>
+                            <constraint firstItem="tIv-EN-pCN" firstAttribute="leading" secondItem="hGw-KH-125" secondAttribute="leadingMargin" id="y7m-El-gzJ"/>
+                            <constraint firstItem="KbS-TZ-LY7" firstAttribute="top" secondItem="tIv-EN-pCN" secondAttribute="bottom" id="z9w-vT-fse"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yWM-Cb-S6Z"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="MDv-G8-3gq" appends="YES" id="z3G-En-kLZ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="latLonSearchButton" destination="lfD-zj-Ib3" id="JMU-u4-0zK"/>
+                        <outlet property="latitudeTextField" destination="Oq3-sh-JKR" id="Cm8-NP-I7J"/>
+                        <outlet property="longitudeTextField" destination="2Ev-Pe-t72" id="9oA-fT-xws"/>
+                        <outlet property="photoImageView" destination="TKe-Rm-uvx" id="O20-Aq-5cJ"/>
+                        <outlet property="photoTitleLabel" destination="eGu-H5-Wcb" id="Cvw-mY-zm8"/>
+                        <outlet property="phraseSearchButton" destination="IYD-Rt-vTc" id="8wb-CC-zPd"/>
+                        <outlet property="phraseTextField" destination="Evi-N5-wcF" id="MXB-Lv-YwG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wG6-iN-czt" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MDv-G8-3gq">
+                    <connections>
+                        <action selector="userDidTapView:" destination="A5Q-dQ-ZYy" id="7yy-HJ-XYw"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="searchiconred" width="50" height="50"/>
+    </resources>
+</document>
